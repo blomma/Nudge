@@ -1,0 +1,20 @@
+## Interface: 20400
+## Title: Nudge |cff7fff7f -Ace2-|r
+## Notes: Show a range indicator for hunters
+## Notes-esES: Muestra un indicador de distancia para los cazadores
+## Author: Fleetfoot
+## OptionalDeps: Ace2
+## SavedVariables: NudgeDB
+## X-License: GPL v2 or later
+
+## X-Website: http://fleetfoot.wowinterface.com/
+## X-Category: Hunter
+## X-Embeds: Ace2
+## X-WoWIPortal: fleetfoot
+## X-RelSite-WoWI: 6406
+
+## Libraries
+embeds.xml
+
+## Addon
+Nudge.lua
