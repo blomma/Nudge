@@ -66,6 +66,7 @@ local defaults = {
 	colors		= {
 		melee = {0,1,0,0.7},
 		range = {0,0,1,0.7},
+		snipper = {0,1,1,0.7},
 		oorange = {1,0,0,0.7}
 	}
 }
@@ -274,15 +275,20 @@ end
 
 function Nudge:OnUpdate()
 	local text
-	if IsSpellInRange(L["Wing Clip"]) == 1 then
+	if IsSpellInRange(L["Wing Clip"], "target") == 1 then
 		if index ~= "melee" then
 			text = L["Melee"]
 			index = "melee"
 		else return end
-	elseif IsSpellInRange(L["Auto Shot"]) == 1 then
+	elseif IsSpellInRange(L["Throw"], "target") == 1 then
 		if index ~= "range" then
-			text = L["In Range"]
+			text = L["Ranged"]
 			index = "range"
+		else return end
+	elseif IsSpellInRange(L["Auto Shot"], "target") == 1 then
+		if index ~= "snipper" then
+			text = L["Sniper"]
+			index = "snipper"
 		else return end
 	else
 		if index ~= "oorange" then
